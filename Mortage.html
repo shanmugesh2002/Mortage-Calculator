@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortage Repayment</title>
+    <link rel="stylesheet" href="./MortageCalc.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <!-- FORM ELEMENTS -->
+        <div class="form-inputs">
+          <!--HEADER CONTENT-->
+          <div class="header-content">
+            <h4 class="subtitle">Mortgage Calculator</h4>
+            <button class="Clear-result">Clear All</button>
+          </div>
+          <!--USER AMOUNT CONTENT-->
+          <div class="user-amount">
+            <h5 class="title">Mortgage Amount</h5>
+            <div class="amt-box">
+              <span class="icon"><i class="fa-solid fa-sterling-sign"></i></span>
+              <input type="text" autocomplete="off" class="user" id="user-amount"></input>
+            </div>
+            <p class="error-statement"></p>
+          </div>
+          <!--YEARS AND PERCENTAGE FROM THE USER CONTENT-->
+          <div class="year-percent">
+            <!--YEARS CONTENT -->
+            <div class="year-percent-items">
+              <h5 class="title">Mortgage Term</h5>
+              <div class="box years">
+                <input type="text" class="input years" id="years" ></input>
+                <span>years</span>
+              </div>
+              <p class="error-statement"></p>
+            </div>
+            <!--PERCENT CONTENT-->
+            <div class="year-percent-items">
+              <h5 class="title">Intrest Rate</h5>
+              <div class="box percentage">
+                <input type="text" class="input percentage" id="percent"></input>
+                <span>%</span>
+              </div>
+              <p class="error-statement"></p>
+            </div>
+          </div>
+          <!--PAYMENT OPTIONS CONTENT-->
+          <div class="Payment-options-container">
+            <h5 class="title">Mortgage Type</h5>
+
+            <div class="options" >
+              <input
+                type="radio"
+                name="radio_type"
+                value="Repayment"
+                id="repayment"
+                class="Repayment payment-method"></input>
+              <label for="repayment">Repayment</label>
+            </div>
+            <div class="options" >
+              <input
+                type="radio"
+                name="radio_type"
+                value="Intrest"
+                id="intrest"
+                class="intrest payment-method"></input>
+              <label for="intrest">Interest Only</label>
+            </div>
+
+            <p class="error-statement"></p>
+          </div>
+          <!--SUBMIT BUTTON CONTENT-->
+          <div class="Submit-btn">
+            <img src="./images/icon-calculator.svg" />
+            <button class="btn">Calculate Repayment</button>
+          </div>
+        </div>
+
+        <!-- RESULT ELEMENTS -->
+        <div class="result-areas">
+          <div class="default-page">
+            <div class="def-page-wrapper">
+              <img src="./images/illustration-empty.svg" />
+              <h3 class="default-title">Result Shown here</h3>
+              <p class="content">
+                Complete the form and click "calculate repayment" to se what
+                your monthly repayment would be
+              </p>
+            </div>
+          </div>
+          <div class="result-page">
+            <div class="result-wrapper">
+              <div class="result-content-page">
+                <h4 class="result-headline">Your Result</h4>
+                <p class="result-para">
+                  Your result are shown below based on the information your
+                  provided.To adjust the result,edit the form and click
+                  "Calculate Repayment" again
+                </p>
+              </div>
+              <div class="result-page-answer">
+                <div class="result-monthly-repayment">
+                  <h5 class="result-title">Your monthly repayment</h5>
+                  <h1 class="result-ans"><span class="icon"
+                    ><i class="fa-solid fa-sterling-sign"></i
+                  ></span>1,77,78</h1>
+                </div>
+                <div class="result-yearly">
+                  <h5 class="subtitle">Total you'ill repay over the term</h5>
+                  <h3 class="result-yearly-pay">78,888,2</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<script src="./MortageCalc.js"></script>  
+</html>
